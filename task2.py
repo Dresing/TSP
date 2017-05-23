@@ -49,11 +49,11 @@ def solve_tsp(points, subtours=[]):
         print "Something wrong in solve_tsplp"
         exit(0)
 
-ran_points = Cities(n=20,seed=42)
+ran_points = Cities(n=6,seed=45)
 
 
 
 sol = solve_tsp(ran_points, [])
-
+print sol
 plot_situation(ran_points, sol)
 

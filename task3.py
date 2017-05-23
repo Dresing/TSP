@@ -49,7 +49,7 @@ def solve_tsp(points, subtours=[]):
     if m.status == GRB.status.OPTIMAL:
         print('The optimal objective is %g' % m.objVal)
         m.write("tsplp.sol")  # write the solution
-        return {(i, j): edges[i, j].x for i, j in E}
+        return {(i, j): edges[i, j].x>=0.99 for i, j in E}
     else:
         print "Something wrong in solve_tsplp"
         exit(0)
